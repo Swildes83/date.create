@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const DateCreateUserSchema = new Schema({
   screenName: { type: String, required: true, unique: true },
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
@@ -17,8 +17,8 @@ const userSchema = new Schema({
   bioCurrentlyWatching: String,
   bioMantra: String,
   bioCurrentRelStatus: { type: Boolean, required: true},
-  savedPotentials: Object,
-  contactList: Object,
+  savedPotentials: Array,
+  contactList: Array,
   reqGender: { type: String, required: true },
   reqTech: String,
   reqGaming: String,
@@ -30,6 +30,6 @@ const userSchema = new Schema({
 
 });
 
-const User = mongoose.model("users", userSchema);
+const DateCreateUser = mongoose.model("DateCreateUser", DateCreateUserSchema);
 
-module.exports = User;
+module.exports = DateCreateUser;
