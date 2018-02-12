@@ -5,20 +5,18 @@ mongoose.Promise = global.Promise;
 // This file empties the Users collection and inserts the users below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/datecreate",
-  {
-    useMongoClient: true
-  }
+  process.env.MONGODB_URI || "mongodb://localhost/datecreate"
 );
 
-const userSeed = [
+const DateCreateUserSeed = [
   {
     screenName: "lcrouch",
     firstName: "Levi",
     lastName: "Crouch",
     age: 25,
     gender: "M",
-    location: "San Diego",
+    locCity: "San Diego",
+    locState: "CA",
     bioGaming: "",
     bioTechnology: "JavScript",
     bioAFKHobbies: "Hiking",
@@ -27,8 +25,8 @@ const userSeed = [
     bioCurrentlyWatching: "Peaky Blinders S3",
     bioMantra: "I need an adult",
     bioCurrentRelStatus: true,
-    savedPotentials: "",
-    contactList: "",
+    savedPotentials: [],
+    contactList: [],
     reqGender: "F",
     reqTech: "",
     reqGaming: "",
@@ -54,8 +52,8 @@ const userSeed = [
     bioCurrentlyWatching: "Gumbel & Gumbel",
     bioMantra: "I just do stuff",
     bioCurrentRelStatus: true,
-    savedPotentials: "",
-    contactList: "",
+    savedPotentials: [],
+    contactList: [],
     reqGender: "F",
     reqTech: "",
     reqGaming: "",
@@ -67,9 +65,9 @@ const userSeed = [
   }
 ];
 
-db.User
+db.DateCreateUser
   .remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
+  .then(() => db.DateCreateUser.collection.insertMany(DateCreateUserSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);
