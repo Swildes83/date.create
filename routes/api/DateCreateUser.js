@@ -3,14 +3,15 @@ const DateCreateUserController = require("../../controllers/DateCreateUserContro
 
 // Matches with "/api/DateCreateUsers"
 router.route("/")
-  .get(DateCreateUserController.findAllUsers);
-  // .post(DateCreateUserController.create);
+  .get(DateCreateUserController.findAllUsers)
+  .post(DateCreateUserController.createUser);
 
-// Matches with "/api/User/:id"
-router
-  .route("/:id")
+// Matches with "/api/DateCreateUsers/:id"
+router.route("/:id")
   .get(DateCreateUserController.findById)
-  .put(DateCreateUserController.update)
-  .delete(DateCreateUserController.removeContact);
+  .put(DateCreateUserController.updateRecord);
 
+// Matches with api/DateCreateUsers/:id/search/city=:locCity&state=:locState&gender=:gender
+router.route("/:id/search/city\=:locCity&state\=:locState&gender\=:gender")
+  .get(DateCreateUserController.findMatch)
 module.exports = router;
