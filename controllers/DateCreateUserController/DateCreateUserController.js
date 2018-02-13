@@ -1,48 +1,55 @@
 var db = require("../../models");
-// var mongojs = require("mongojs");
-
-// // Mongojs configuration
-// var databaseUrl = "datecreate";
-// var collections = ["users"];
-
-// Hook our mongojs config to the db var
-// var db = mongojs(databaseUrl, collections);
-// db.on("error", function(error) {
-//   console.log("Database Error:", error);
-// });
 
 // Defining methods for the UserController
 module.exports = {
+    // Done
     findAllUsers: function (req, res) {
         db.DateCreateUser
             .find(req.query)
-            // .sort({ id: -1 })
+            .sort({ id: -1 })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
+    // Done
     findById: function (req, res) {
-    //     db.User
-    //         .findById(req.params.id)
-    //         .then(dbModel => res.json(dbModel))
-    //         .catch(err => res.status(422).json(err));
+        db.DateCreateUser
+            .findById(req.params.id)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     },
-    // create: function (req, res) {
-    //     db.User
-    //         .create(req.body)
-    //         .then(dbModel => res.json(dbModel))
-    //         .catch(err => res.status(422).json(err));
-    // },
-    update: function (req, res) {
-    //     db.User
-    //         .findOneAndUpdate({ _id: req.params.id }, req.body)
-    //         .then(dbModel => res.json(dbModel))
-    //         .catch(err => res.status(422).json(err));
+    // Done
+    createUser: function (req, res) {
+        db.DateCreateUser
+            .create(req.body)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     },
-    removeContact: function (req, res) {
-    //     db.User
+    // Done
+    updateRecord: function (req, res) {
+        db.DateCreateUser
+            .findOneAndUpdate({ _id: req.params.id }, req.body)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
+    findMatch: function (req, res) {
+        console.log("req.params", req.params);
+        db.DateCreateUser
+            .find({locCity: req.params.locCity})
+            .and({locState: req.params.locState})
+            .and({gender: req.params.gender})
+            // TODO add ability to query by minAge and maxAge
+            // .and({$gte: req.params.minAge})
+            // .and({maxAge: {$lte: req.params.maxAge}})
+            .sort({ id: -1 })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    }
+    // // TODO
+    // removeContact: function (req, res) {
+    //     db.DateCreateUser
     //         .findById({ _id: req.params.id })
     //         .then(dbModel => dbModel.remove())
     //         .then(dbModel => res.json(dbModel))
     //         .catch(err => res.status(422).json(err));
-    }
+    // }
 };
