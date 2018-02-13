@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './components/Header';
-import createUser from './components/createUser';
+// import mainPage from './components/mainPage';
+// import createUser from './components/createUser';
+// import contactQuiz from './components/contactQuiz';
+// import publicProfile from './components/publicProfile';
 
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="bg">
-        <Header/>
-        <createUser/>
+      <div className="container">
+        <Header />
+        <Switch>
+          {/* <Route exact path="/" component={mainPage} />
+          <Route exact path="/createUser" component={createUser} />
+          <Route exact path="/:id/public" component={publicProfile} /> */}
+        </Switch>
       </div>
-      // <div className="App">
-      //   <div className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <h2>Welcome to React</h2>
-      //   </div>
-      //   <p className="App-intro">
-      //     To get started, edit <code>src/App.js</code> and save to reload.
-      //   </p>
-      // </div>
     );
   }
 }
