@@ -1,11 +1,12 @@
 .createuserbutton{
-    margin: 0 70px;
-    text-align: center;
+    margin: 0 20%;
+
 }
 .loginbutton
 {
-    float:right;
-    text-align: center;
+    /* float:right; */
+    margin: 0 20%;
+
 }
 .row .col {
     padding: 0 0rem;
