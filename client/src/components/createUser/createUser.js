@@ -1,13 +1,11 @@
 import React from "react";
-import "./createUser.css";
+import "./CreateUser.css";
 
-const createUser = (props) => (
-    <div 
-        className="col-md-4" 
-        // style={{backgroundImage: `url("${props.image}")`}}
-        // onClick= {() => props.updateScore(props)}
-    >
+const CreateUser = (props) => (
+
+    <div>
+    <a class="waves-effect waves-light btn">create user</a>
     </div>
 );
 
-export default createUser;
+export default CreateUser;

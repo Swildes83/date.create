@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './components/Header';
-// import mainPage from './components/mainPage';
-// import createUser from './components/createUser';
-// import contactQuiz from './components/contactQuiz';
-// import publicProfile from './components/publicProfile';
+import CreateUser from './components/CreateUser';
 
 import './App.css';
 
