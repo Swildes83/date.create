@@ -26,7 +26,7 @@ const DateCreateUserSeed = [
     bioCurrentlyListening: ["2pac"],
     bioCurrentlyReading: ["Till Death us do part"],
     bioCurrentlyWatching: ["Peaky Blinders S3", "Comedians in Cars Getting Coffee"],
-    bioMantra: "I need an adult",
+    bioMantra: "If you like Pina Coladas, and getting caught in the rain; If you're not into yoga, if you have half a brain; If you like making love at midnight, in the dunes of the cape; I'm the love that you've looked for, write to me, and escape",
     bioCurrentRelStatus: true,
     savedPotentials: [],
     contactList: [],

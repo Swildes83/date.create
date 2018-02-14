@@ -6,6 +6,10 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+<<<<<<< HEAD
+=======
+    "react-router-dom": "^4.2.2",
+>>>>>>> c6fb5c79401baf6c15b233002a17b5fe2a432af0
     "react-scripts": "1.0.14",
     "semantic-ui-css": "^2.2.14",
     "semantic-ui-react": "^0.78.2"
