@@ -1,6 +1,13 @@
-.col-md-4 {
-    height: 250px;
-    background-size: cover;
-    cursor: pointer;
-    border: 4px solid darkorange;
+.createuserbutton{
+    margin: 0 20%;
+
+}
+.loginbutton
+{
+    /* float:right; */
+    margin: 0 20%;
+
+}
+.row .col {
+    padding: 0 0rem;
 }
