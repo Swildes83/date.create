@@ -1,7 +1,7 @@
 import React from "react";
-import "./createUser.css";
+import "./CreateUser.css";
 
-const createUser = (props) => (
+const CreateUser = (props) => (
     <div 
         className="col-md-4" 
         // style={{backgroundImage: `url("${props.image}")`}}
@@ -10,4 +10,4 @@ const createUser = (props) => (
     </div>
 );
 
-export default createUser;
+export default CreateUser;
