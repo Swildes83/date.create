@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './components/Header';
-import CreateUser from './components/CreateUser';
-// import Login from './components/Login';
-import Quiz from './components/Quiz';
-
+import CreateUser from './components/createUser';
+import ContactQuiz from './components/contactQuiz';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="bg">
-        <Header/>
-        <CreateUser/>
-        {/* <Login/> */}
-        <Quiz/>
-      </div>
-      // <div className="App">
-      //   <div className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <h2>Welcome to React</h2>
-      //   </div>
-      //   <p className="App-intro">
-      //     To get started, edit <code>src/App.js</code> and save to reload.
-      //   </p>
-      // </div>
+      <Router>
+        <div className="container">
+          <Header />
+          <Switch>
+            <Route exact path="/:id/public/quiz" component={ContactQuiz} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
