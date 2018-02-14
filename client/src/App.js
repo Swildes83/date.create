@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import CreateUser from './components/CreateUser';
-import ProfileCard from "./components/ProfileCard/ProfileCard";
+// import Login from './components/Login';
+import Quiz from './components/Quiz';
 
 import './App.css';
 
@@ -10,8 +11,9 @@ class App extends Component {
     return (
       <div className="bg">
         <Header/>
-        <createUser/>
-        <ProfileCard/>
+        <CreateUser/>
+        {/* <Login/> */}
+        <Quiz/>
       </div>
       // <div className="App">
       //   <div className="App-header">

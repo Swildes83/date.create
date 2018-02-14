@@ -1,3 +1,16 @@
 header {
-    
+    margin: 0 10%;
+}
+h1 {
+    font-size: 4rem;
+    line-height: 110%;
+    margin:.5rem 0 0 0;
+}
+h4 {
+    font-size: 1.4rem;
+}
+h5 {
+    font-size: 1.4rem;
+    line-height: 110%;
+    margin: .75rem 0 0rem 0;
 }

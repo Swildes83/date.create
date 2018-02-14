@@ -2,11 +2,14 @@ import React from "react";
 import "./CreateUser.css";
 
 const CreateUser = (props) => (
-    <div 
-        className="col-md-4" 
-        // style={{backgroundImage: `url("${props.image}")`}}
-        // onClick= {() => props.updateScore(props)}
-    >
+
+    <div className="row">
+    <div className="col s6">
+    <a className="waves-effect waves-light indigo lighten-2 btn createuserbutton">create new user</a>
+    </div>
+    <div className="col s6">
+    <a className="waves-effect waves-light indigo lighten-2 btn loginbutton">login</a>
+    </div>
     </div>
 );
 
