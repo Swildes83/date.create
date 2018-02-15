@@ -1,0 +1,22 @@
+.card-content {
+    position: relative;
+    background-image:url('bg-image.jpg');
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;   
+    height: 500px;
+}
+
+#profileimage {
+    position: absolute;
+    bottom: 5%;
+    max-width: 300px;
+    z-index: 5;
+}
+#name {
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+    z-index: 5;
+    color: white;
+}

@@ -3,8 +3,13 @@ import "./createUser.css";
 
 const CreateUser = (props) => (
 
-    <div>
-    <a class="waves-effect waves-light btn">create user</a>
+    <div className="row">
+    <div className="col s6">
+    <a className="waves-effect waves-light indigo lighten-2 btn createuserbutton">create new user</a>
+    </div>
+    <div className="col s6">
+    <a className="waves-effect waves-light indigo lighten-2 btn loginbutton">login</a>
+    </div>
     </div>
 );
 

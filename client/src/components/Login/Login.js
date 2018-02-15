@@ -2,11 +2,10 @@ import React from "react";
 import "./Login.css";
 
 const Login = (props) => (
-    <div 
-        className="col-md-4" 
-        // style={{backgroundImage: `url("${props.image}")`}}
-        // onClick= {() => props.updateScore(props)}
-    >
+    <div className="row">
+    <div className="col s6">
+    <a className="waves-effect waves-light btn loginbutton">login</a>
+    </div>
     </div>
 );
 
