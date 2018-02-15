@@ -5,7 +5,8 @@ import CreateUser from './components/createUser';
 import ContactQuiz from './components/contactQuiz';
 import './App.css';
 import { Button, Card, Row, Col } from 'react-materialize';
-import PublicProfile from "./components/UserPages/publicProfile";
+import PublicProfile from "./components/UserPages/PublicProfile";
+import UtilPage from "./components/UtilPage/UtilPage";
 
 
 class App extends Component {
@@ -13,10 +14,12 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
-          
+
           <Switch>
+            <Route exact path="/login" component={UtilPage} />
             <Route exact path="/:id/public/quiz" component={ContactQuiz} />
             <Route exact path="/:id/profile" component={PublicProfile} />
+            <Route exact path="/admin/util" component={UtilPage} />
           </Switch>
         </div>
       </Router>
