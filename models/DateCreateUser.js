@@ -7,6 +7,8 @@ const DateCreateUserSchema = new Schema({
   lastName: { type: String, required: true },
   age: { type: Number, required: true },
   gender: { type: String, required: true },
+  password: {type: String, required:true },
+  email: {type:String, require: true},
   locCity: String,
   locState: String,
   bioGaming: String,
