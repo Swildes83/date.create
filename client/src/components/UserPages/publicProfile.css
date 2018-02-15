@@ -11,11 +11,12 @@
     position: absolute;
     bottom: 5%;
     max-width: 300px;
+    z-index: 5;
 }
 #name {
     position: absolute;
     bottom: 5%;
     right: 20%;
-    z-index: 2;
+    z-index: 5;
     color: white;
 }
