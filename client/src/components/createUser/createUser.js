@@ -1,5 +1,5 @@
 import React from "react";
-import "./createUser.css";
+import "./CreateUser.css";
 
 const CreateUser = (props) => (
 
