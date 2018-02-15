@@ -4,12 +4,6 @@ import "./publicProfile.css";
 // import { Card } from "react-materialize";
 const publicProfile = props => (
     <div>
-        <head>
-            <title>Public Profile</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"></link>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-        </head>
-            <body>
                 <div className="card">
                     <div className="card-content">
                         {/* <div className="profileimage">
@@ -32,7 +26,6 @@ const publicProfile = props => (
                             </ul>
                         </div>
                     </div>
-            </body>
     </div>
    );
 
