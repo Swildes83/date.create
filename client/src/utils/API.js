@@ -1,19 +1,12 @@
 import axios from "axios";
-export default {
+const BASEURL = "/api/DateCreateUsers/";
 
-  getBooks: function() {
-    return axios.get("/api/");
-  },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
-  },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
-  },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
-  }
+export default {
+    findMatch: function (city, state, gender) {
+        // /:id/search/city\=:locCity&state\=:locState&gender\=:gender
+        return axios.get(BASEURL + "/search/city=" + city + "&state=" + state + "&gender=" + gender);
+    },
+    getUserData: function (id) {
+       return axios.get(BASEURL + id);
+    }
 };
