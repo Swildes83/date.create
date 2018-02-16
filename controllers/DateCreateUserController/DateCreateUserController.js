@@ -2,6 +2,10 @@ var db = require("../../models");
 
 // Defining methods for the UserController
 module.exports = {
+    //User Authentication
+    findOne: function(err, res) {
+        
+    },
     // Done
     findAllUsers: function (req, res) {
         db.DateCreateUser

@@ -25,6 +25,7 @@
     "express": "^4.15.4",
     "mongojs": "^2.5.0",
     "mongoose": "^5.0.4",
-    "react-materialize": "^1.1.2"
+    "react-materialize": "^1.1.2",
+    "socket.io": "^2.0.4"
   }
 }
