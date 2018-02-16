@@ -1,8 +1,8 @@
-import React from "react";
-import "./Quiz.css";
+// import React from "react";
+// import "./Quiz.css";
 
-const Quiz = (props) => (
-    <p>Quiz goes here</p>
-);
+// const Quiz = (props) => (
+//     <p>Quiz goes here</p>
+// );
 
-export default Quiz;
+// export default Quiz;

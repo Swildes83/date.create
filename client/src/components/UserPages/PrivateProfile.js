@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./PrivateProfile.css";
 import API from "../../utils/API";
-import ProfileCard from "../ProfileCard/ProfileCard";
+// import ProfileCard from "../ProfileCard/ProfileCard";
 
 class PrivateProfile extends Component {
     state = {
@@ -45,7 +45,7 @@ class PrivateProfile extends Component {
                         </li>
                     </ul>
                 </div>
-                <ProfileCard/>
+                {/* <ProfileCard/> */}
             </div>)
 
 
