@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import "./PublicProfile.css";
+import "./PrivateProfile.css";
 import API from "../../utils/API";
+import ProfileCard from "../ProfileCard/ProfileCard";
 
-class PublicProfile extends Component {
+class PrivateProfile extends Component {
     state = {
         result: [],
         search: ""
     };
     componentDidMount() {
-        this.loadUserData("5a826338fe24662c0c4054dc");
+        this.loadUserData();
     };
     loadUserData = (id) => {
         API.getUserData(id)
@@ -25,17 +26,29 @@ class PublicProfile extends Component {
                 <div className="card-tabs">
                     <ul className="tabs tabs-fixed-width">
                         <li className="tab">
-                            <a href="#test4">Test 1</a>
+                            <a href="#test4">date.</a>
                         </li>
                         <li className="tab">
-                            <a className="active" href="#test5">Test 2</a>
+                            <a className="active" href="#test5">date.</a>
                         </li>
                         <li className="tab">
-                            <a href="#test6">Test 3</a>
+                            <a href="#test6">date.</a>
+                        </li>
+                        <li className="tab">
+                            <a href="#test7">date.</a>
+                        </li>
+                        <li className="tab">
+                            <a href="#test8">date.</a>
+                        </li>
+                        <li className="tab">
+                            <a href="#test9">date.</a>
                         </li>
                     </ul>
                 </div>
+                <ProfileCard/>
             </div>)
+
+
     }
 }
-export default PublicProfile;
+export default PrivateProfile;
