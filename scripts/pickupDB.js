@@ -10,7 +10,7 @@ mongoose.connect(
 
 const PickupSeed = [
   {
-    pickupLine: "You had me at 'Hello World'."
+    pickupLine: "You had me at 'Hello Worl d'."
   },
   {
     pickupLine: "I hope we merge without any conflicts."
