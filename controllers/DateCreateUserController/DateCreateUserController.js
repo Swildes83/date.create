@@ -7,14 +7,14 @@ module.exports = {
         db.DateCreateUser
             .find(req.query)
             .sort({ id: -1 })
-            .then(dbModel => res.json(dbModel))
+            .then(dbModel => res.status(200).json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     // Done
     findById: function (req, res) {
         db.DateCreateUser
             .findById(req.params.id)
-            .then(dbModel => res.json(dbModel))
+            .then(dbModel => res.status(200).json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     // Done

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Header, Image, Modal, Icon, Form, TextArea } from 'semantic-ui-react'
-import "./contactQuiz.css";
+import "./ContactQuiz.css";
 
 const ContactQuizModal = () => (
     <Modal trigger={<Button>Contact Me!</Button>}>

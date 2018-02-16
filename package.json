@@ -8,6 +8,7 @@
     "client": "cd client && npm run start",
     "start": "./node_modules/.bin/concurrently \"nodemon ./server.js\" \"npm run client\"",
     "seed": "node scripts/seedDB.js",
+    "seedPickup": "node scripts/pickupDB.js",
     "build": "cd client && npm run build",
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,6 +21,7 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "express": "^4.15.4",
     "mongojs": "^2.5.0",
     "mongoose": "^5.0.4",
