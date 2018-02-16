@@ -11,7 +11,7 @@ router.route("/:id")
   .get(DateCreateUserController.findById)
   .put(DateCreateUserController.updateRecord);
 
-// Matches with "api/DateCreateUsers/:id/search/city=:locCity&state=:locState&gender=:gender"
-router.route("/:id/search/city\=:locCity&state\=:locState&gender\=:gender")
+// Matches with "api/DateCreateUsers/search/city=:locCity&state=:locState&gender=:gender"
+router.route("/search/city\=:locCity&state\=:locState&gender\=:gender")
   .get(DateCreateUserController.findMatch)
 module.exports = router;
