@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import "./Mainpage.css";
 import Header from '../Header';
-import CreateUser from '../CreateUser';
-import ContactQuiz from '../ContactQuiz';
+import CreateUser from '../CreateUser/CreateUser';
+import ContactQuiz from '../contactQuiz/ContactQuiz';
 // import Login from './Login';
 // import Quiz from './Quiz';
 
