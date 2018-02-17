@@ -26,7 +26,7 @@ io.listen(port);
 console.log('listening on port ', port);
 
 // Serve up static assets (usually on heroku)
-// Added another port - Connor
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }

@@ -23,8 +23,10 @@
   "dependencies": {
     "axios": "^0.17.1",
     "express": "^4.15.4",
+    "jsonwebtoken": "^8.1.1",
     "mongojs": "^2.5.0",
     "mongoose": "^5.0.4",
+    "morgan": "^1.9.0",
     "react-materialize": "^1.1.2",
     "socket.io": "^2.0.4"
   }
