@@ -7,6 +7,10 @@
     height: 500px;
 }
 
+html {
+    /* background-image: unset; */
+}
+
 #profileimage {
     position: absolute;
     bottom: 5%;
