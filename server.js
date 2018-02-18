@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const path = require("path");
 const routes = require("./routes");
-const morgon = require('morgan')
+const morgan = require('morgan');
 const app = express();
 const io = require('socket.io');
 
@@ -16,14 +16,14 @@ const PORT = process.env.PORT || 3001;
 app.set('superSecret', config.secret); //secret Variable
 
 
-io.on('connection', (client) => {
+// io.on('connection', (client) => {
 
-});
+// });
 ////////////////////////
 //
-const port = 8000;
-io.listen(port);
-console.log('listening on port ', port);
+// const port = 8000;
+// io.listen(port);
+//console.log('listening on port ', port);
 
 // Serve up static assets (usually on heroku)
 
@@ -42,13 +42,7 @@ app.use(morgan('dev'));
 app.use(routes);
 // Send every request to the React app
 // Define any API routes before this runs
-// app.get('/setup', function(req, res){
-//   //creating a sample user
-//   const test = new DateCreateUser({
 
-    
-//   })
-// })
 
 
 

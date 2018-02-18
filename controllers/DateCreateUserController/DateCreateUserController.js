@@ -1,10 +1,35 @@
 var db = require("../../models");
+var jwt = require('jsonwebtoken');
 
 // Defining methods for the UserController
 module.exports = {
     //User Authentication
-    findOne: function(err, res) {
-        
+    findOne: function(req, res) {
+        screenName: req.body.screenName
+    }, function(err, user) {
+        if(err) throw err;
+
+        if(!user) {
+            res.json({ success: false, message: "Authentication failed. User not found."});
+        } else if (user) {
+            if(user.password != req.body.password) {
+                res.json({ success: false, message: "Authentication failed. Not the right password."});
+            } else {
+                const payload = {
+                    admin: user.admin
+                };
+
+                    var token = jwt.sign(payload, app.get('superSecret'), {
+                        expiresInMinutes: 1440
+                    });
+
+                    res.json({
+                        success: true,
+                        message: "Here's a token, don't spend it all at once",
+                        token: token
+                    });
+            }
+        }
     },
     // Done
     findAllUsers: function (req, res) {
@@ -18,7 +43,7 @@ module.exports = {
     findById: function (req, res) {
         db.DateCreateUser
             .findById(req.params.id)
-            .then(dbModel => res.status(200).json(dbModel))
+            .then(dbModel => res.status(200).json(dbModel))              
             .catch(err => res.status(422).json(err));
     },
     // Done
