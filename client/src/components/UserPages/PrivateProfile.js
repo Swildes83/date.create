@@ -45,7 +45,6 @@ class PrivateProfile extends Component {
                         </li>
                     </ul>
                 </div>
-                {/* <ProfileCard/> */}
             </div>)
 
 

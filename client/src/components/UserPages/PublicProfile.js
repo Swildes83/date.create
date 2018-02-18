@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./PublicProfile.css";
 import API from "../../utils/API";
+import BioData from "../BioData";
+
+const userID = "5a8624f2fe9f971c5c565bb3";
 
 class publicProfile extends Component {
     state = {
@@ -8,7 +11,7 @@ class publicProfile extends Component {
         search: ""
     };
     componentDidMount() {
-        this.loadUserData("5a826338fe24662c0c4054dc");
+        this.loadUserData(userID);
     };
     loadUserData = (id) => {
         API.getUserData(id)
@@ -19,13 +22,13 @@ class publicProfile extends Component {
         return (
             <div className="card">
                 <div className="card-content">
-                    <img id="profileimage" src="../assets/images/profile.png" alt="My profile"></img>
-                    <p id="name"> Jaxin San Filippo  </p>
+                    <img id="profileimage" src="../assets/profile/ChickenKiller/profile.png" alt="My profile"></img>
+                    <p id="name">{this.state.result.screenName}</p>
                 </div>
-                <div className="card-tabs">
+                {/* <div className="card-tabs">
                     <ul className="tabs tabs-fixed-width">
                         <li className="tab">
-                            <a href="#test4">Test 1</a>
+                            <a href="#test4">BIO</a>
                         </li>
                         <li className="tab">
                             <a className="active" href="#test5">Test 2</a>
@@ -34,7 +37,8 @@ class publicProfile extends Component {
                             <a href="#test6">Test 3</a>
                         </li>
                     </ul>
-                </div>
+                </div> */}
+                <BioData />
             </div>)
     }
 }
