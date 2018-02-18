@@ -25,20 +25,32 @@ class BioData extends Component {
     render() {
         return (
             <div className="bioList">
+                <ul><b>Mantra:</b>
+                    <li>{this.state.result.bioMantra}</li>
+                </ul>
                 <ul><b>Technology:</b>
                     <li>{this.state.result.bioTechnology}</li>
                 </ul>
-                <ul><b>AFK Hobbies</b>
+                <ul><b>AFK Hobbies:</b>
                     <li>{this.state.result.bioAFKHobbies}</li>
                 </ul>
-                <ul><b>Movies</b>
+                <ul><b>Movies:</b>
                     <li>{this.state.result.bioMovies}</li>
                 </ul>
                 <ul><b>TV:</b>
                     <li>{this.state.result.bioTV}</li>
                 </ul>
-                <ul><b>Music</b>
+                <ul><b>Music:</b>
                     <li>{this.state.result.bioMusic}</li>
+                </ul>
+                <ul><b>Currently Reading:</b>
+                    <li>{this.state.result.bioCurrentlyReading}</li>
+                </ul>
+                <ul><b>Currently Watching:</b>
+                    <li>{this.state.result.bioCurrentlyWatching}</li>
+                </ul>
+                <ul><b>Currently Listening To:</b>
+                    <li>{this.state.result.bioCurrentlyListening}</li>
                 </ul>
             </div >)
 

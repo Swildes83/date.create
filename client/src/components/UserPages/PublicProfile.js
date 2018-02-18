@@ -22,8 +22,8 @@ class publicProfile extends Component {
         return (
             <div className="card">
                 <div className="card-content">
-                    <img id="profileimage" src="../assets/images/profile.png" alt="My profile"></img>
-                    <p id="name"> Jaxin San Filippo  </p>
+                    <img id="profileimage" src="../assets/profile/ChickenKiller/profile.png" alt="My profile"></img>
+                    <p id="name">{this.state.result.screenName}</p>
                 </div>
                 <div className="card-tabs">
                     <ul className="tabs tabs-fixed-width">
