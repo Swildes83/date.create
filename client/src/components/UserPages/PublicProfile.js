@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./PublicProfile.css";
 import API from "../../utils/API";
 
-class PublicProfile extends Component {
+class publicProfile extends Component {
     state = {
         result: [],
         search: ""
@@ -38,4 +38,4 @@ class PublicProfile extends Component {
             </div>)
     }
 }
-export default PublicProfile;
+export default publicProfile;
