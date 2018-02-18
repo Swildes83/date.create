@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Mainpage from './components/Mainpage';
 import './App.css';
 // import { Button, Card, Row, Col } from 'react-materialize';
-import PublicProfile from "./components/UserPages/PublicProfile";
+import PublicProfile from "./components/UserPages/publicProfile";
 // import UtilPage from "./components/UtilPage/UtilPage";
 import PrivateProfile from "./components/UserPages/PrivateProfile";
 
