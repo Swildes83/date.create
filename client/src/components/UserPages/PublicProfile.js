@@ -25,7 +25,7 @@ class publicProfile extends Component {
                     <img id="profileimage" src="../assets/profile/ChickenKiller/profile.png" alt="My profile"></img>
                     <p id="name">{this.state.result.screenName}</p>
                 </div>
-                <div className="card-tabs">
+                {/* <div className="card-tabs">
                     <ul className="tabs tabs-fixed-width">
                         <li className="tab">
                             <a href="#test4">BIO</a>
@@ -37,7 +37,7 @@ class publicProfile extends Component {
                             <a href="#test6">Test 3</a>
                         </li>
                     </ul>
-                </div>
+                </div> */}
                 <BioData />
             </div>)
     }
