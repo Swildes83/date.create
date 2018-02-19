@@ -25,7 +25,6 @@ class BioData extends Component {
     render() {
         return (
             <div className="bioList">
-            <h5>BIO:</h5>
                 <ul><b>Mantra:</b>
                     <li>{this.state.result.bioMantra}</li>
                 </ul>

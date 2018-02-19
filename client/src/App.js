@@ -12,7 +12,7 @@ class App extends Component {
         <div className="container"> 
           <Switch>
             <Route exact path="/" component = {Mainpage} />
-            <Route exact path="/:id/profile" component={PublicProfile} />
+            <Route exact path="/:id" component={PublicProfile} />
             <Route exact path="/:id/private" component={PrivateProfile} />
           </Switch>
         </div>
