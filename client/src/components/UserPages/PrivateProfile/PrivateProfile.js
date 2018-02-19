@@ -4,6 +4,7 @@ import "./PrivateProfile.css";
 import API from "../../../utils/API";
 import Placeholder from "../Placeholder";
 import Requirements from "./Requirements";
+import Results from "./Results";
 
 const userID = "5a8624f2fe9f971c5c565bb3";
 
@@ -31,27 +32,27 @@ class PrivateProfile extends Component {
                     <div className="card-tabs">
                         <ul className="tabs tabs-fixed-width">
                             <li className="tab">
-                                <a href="/:id/preferences">date(preferences)</a>
+                            <NavLink to="/preferences">date(preferences)</NavLink>
                             </li>
                             <li className="tab">
                                 <NavLink to="/requirements">date(requirements)</NavLink>
                             </li>
                             <li className="tab">
-                                <a href="/results">date(results)</a>
+                                <NavLink to="/results">date(results)</NavLink>
                             </li>
                             <li className="tab">
-                                <a href="/potentials">date(potentials)</a>
+                            <NavLink to="/potentials">date(potentials)</NavLink>
                             </li>
                             <li className="tab">
-                                <a href="/contacts">date(contacts)</a>
+                            <NavLink to="/contacts">date(contacts)</NavLink>
                             </li>
                         </ul>
                     </div>
                     <div className="private-content">
                         <Route path="/" component={Placeholder} />
-                        <Route path="/:id/preferences" component={Placeholder} />
+                        <Route path="/preferences" component={Placeholder} />
                         <Route path="/requirements" component={Requirements} />
-                        <Route path="/results" component={Placeholder} />
+                        <Route path="/results" component={Results} />
                         <Route path="/potentials" component={Placeholder} />
                         <Route path="/contacts" component={Placeholder} />
                     </div>
