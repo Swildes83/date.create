@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import {Route, NavLink, HashRouter} from "react-router-dom";
 import "./PrivateProfile.css";
-import API from "../../utils/API";
-// import ProfileCard from "../ProfileCard/ProfileCard";
+import API from "../../../utils/API";
+import Placeholder from "../Placeholder";
+
+const userID = "5a8624f2fe9f971c5c565bb3";
 
 class PrivateProfile extends Component {
     state = {
@@ -9,7 +12,7 @@ class PrivateProfile extends Component {
         search: ""
     };
     componentDidMount() {
-        this.loadUserData();
+        this.loadUserData(userID);
     };
     loadUserData = (id) => {
         API.getUserData(id)
@@ -20,32 +23,30 @@ class PrivateProfile extends Component {
         return (
             <div className="card">
                 <div className="card-content">
-                    <img id="profileimage" src="../assets/images/profile.png" alt="My profile"></img>
-                    <p id="name"> Jaxin San Filippo  </p>
+                    <img id="profileimage" src="../assets/profile/ChickenKiller/profile.png" alt="My profile"></img>
+                    <p id="name">{this.state.result.screenName}</p>
                 </div>
                 <div className="card-tabs">
                     <ul className="tabs tabs-fixed-width">
-                        <li className="tab">
-                            <a href="#test4">date.</a>
+                    <li className="tab">
+                            <a href="/preferences">date(preferences)</a>
                         </li>
                         <li className="tab">
-                            <a className="active" href="#test5">date.</a>
+                            <a href="/requirements">date(requirements)</a>
                         </li>
                         <li className="tab">
-                            <a href="#test6">date.</a>
+                            <a href="/results">date(results)</a>
                         </li>
                         <li className="tab">
-                            <a href="#test7">date.</a>
+                            <a href="/potentials">date(potentials)</a>
                         </li>
                         <li className="tab">
-                            <a href="#test8">date.</a>
-                        </li>
-                        <li className="tab">
-                            <a href="#test9">date.</a>
+                            <a href="/contacts">date(contacts)</a>
                         </li>
                     </ul>
                 </div>
-            </div>)
+            </div>
+        )
 
 
     }
