@@ -37,7 +37,7 @@ class publicProfile extends Component {
                         </li>
                     </ul>
                 </div>
-                <div className="bioContent">
+                <div className="public-Content">
                 <Route path="/" component={Placeholder}/>
                 <Route path="/:id/bio" component={BioData}/>
                 <Route path="/:id/contact" component={Contact}/>
