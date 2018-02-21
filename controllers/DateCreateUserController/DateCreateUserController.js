@@ -11,14 +11,16 @@ module.exports = {
 
         if(!user) {
             res.json({ success: false, message: "Authentication failed. User not found."});
+            console.log("Controller UN");
         } else if (user) {
             if(user.password != req.body.password) {
                 res.json({ success: false, message: "Authentication failed. Not the right password."});
+                console.log("Controller PW");
             } else {
                 const payload = {
                     admin: user.admin
                 };
-
+                    console.log("Controller Token");
                     var token = jwt.sign(payload, app.get('superSecret'), {
                         expiresInMinutes: 1440
                     });

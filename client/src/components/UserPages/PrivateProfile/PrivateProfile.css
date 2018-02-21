@@ -1,6 +1,7 @@
 .card-content {
     position: relative;
-    background-image:url('../bg-image.jpg');
+    background-image:url('../pexels-photo-255379.jpeg');
+    
     background-size: cover;
     background-position: fixed;
     background-repeat: no-repeat;   
