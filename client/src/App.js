@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from './components/Header';
-import CreateUser from './components/CreateUser/CreateUser';
-import ContactQuiz from './components/ContactQuiz';
 import Mainpage from './components/Mainpage/Mainpage';
 import './App.css';
-import { Button, Card, Row, Col } from 'react-materialize';
+import Login from './components/Login/';
+//import { Button, Card, Row, Col } from 'react-materialize';
 import PublicProfile from "./components/UserPages/PublicProfile";
-import UtilPage from "./components/UtilPage/UtilPage";
+
 import PrivateProfile from "./components/UserPages/PrivateProfile";
 
 class App extends Component {
@@ -16,12 +14,11 @@ class App extends Component {
       <Router>
         <div className="container"> 
           <Switch>
-            <Route exact path="/login" component={UtilPage} />
             <Route exact path="/" component = {Mainpage} />
-            <Route exact path="/:id/public/quiz" component={ContactQuiz} />
-            <Route exact path="/:id/profile" component={PublicProfile} />
-            <Route exact path="/admin/util" component={UtilPage} />
-            <Route exact path="/:id/private" component={PrivateProfile} />
+            <Route exact path="/private/:id" component={PrivateProfile} />
+            <Route exact path='/public/:id' component={PublicProfile} />
+            <Route exact path="/login" component={Login} />
+            {/* <Route exact path="/admin/util" component={UtilPage} /> */}
           </Switch>
         </div>
       </Router>

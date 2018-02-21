@@ -32,10 +32,10 @@ router.post("/authenticate", function(req, res) {
     if(err) throw err;
 
     if(!user) {
-        res.json({ success: false, message: "Authentication failed. User not found."});
+        res.status(400).json({ success: false, message: "Authentication failed. User not found."});
     } else if (user) {
         if(user.password != req.body.password) {
-            res.json({ success: false, message: "Authentication failed. Not the right password."});
+            res.status(400).json({ success: false, message: "Authentication failed. Not the right password."});
         } else {
           console.log(user.admin);
             const payload = {
@@ -50,7 +50,8 @@ router.post("/authenticate", function(req, res) {
                 res.json({
                     success: true,
                     message: "Here's a token, don't spend it all at once",
-                    token: token
+                    token: token,
+                    user: user
                 });
         }
     }
