@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import "./Footer.css";
-import { Toast } from 'react-materialize'
 import pickuplines from "../../pickuplines.js"
-// import pickupLines from ''
+
 
 class Footer extends Component {
 
@@ -13,7 +12,7 @@ class Footer extends Component {
 
     componentDidMount() {
         this.updateLine();
-        setInterval(this.updateLine, 3000);
+        setInterval(this.updateLine, 8000);
     }
 
     updateLine = () => {
