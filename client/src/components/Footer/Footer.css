@@ -14,8 +14,12 @@ h5 {
     line-height: 110%;
     margin: .75rem 0 0rem 0;
 }
+h6 {
+    text-align: right;
+}
 
-.toast {
+section{
+    color:white;
     border-radius: 2px;
     position: fixed;
     top: auto;

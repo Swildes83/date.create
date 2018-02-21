@@ -1,37 +1,47 @@
 import React, { Component } from 'react';
 import "./Footer.css";
 import { Toast } from 'react-materialize'
+import pickuplines from "../../pickuplines.js"
 // import pickupLines from ''
 
 class Footer extends Component {
 
     state = {
-        pickupLines: ["pick up line one", "pick up line two", "pick up line three"],
-        selectedPickUpLine: "Test Line"
+        pickupLines: pickuplines,
+        selectedPickUpLine: ""
     }
-    
+
     componentDidMount() {
-            this.setState({
-                selectedPickUpLine: this.printQuote()
-            });
+        setInterval(this.updateLine, 3000);
+    }
+
+    updateLine = () => {
+        this.setState({
+            selectedPickUpLine: this.printQuote()
+        });
     }
 
     printQuote = () => {
         let randomId = this.getRandomLine(this.state.pickupLines);
-        return this.state.pickupLines[randomId];
+        return this.state.pickupLines[randomId].pickupLine;
     }
 
     getRandomLine = (pickupLines) => Math.floor(Math.random() * pickupLines.length);
 
     render() {
+        console.log(this.state.selectedPickUpLine);
         return (
             <footer>
-                <Toast toast={this.state.selectedPickUpLine}>
-                    Generate pickup lines
-                </Toast>
+
+                <section id="pickupLines">
+                    <h5>Can't think of anything to say?</h5>
+                    <div className="lines">
+                        "{this.state.selectedPickUpLine}"
+                    </div>
+                </section>
             </footer>
         )
     }
 }
 
-    export default Footer;
+export default Footer;
