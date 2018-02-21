@@ -1,6 +1,6 @@
 const pickuplines = [
     {
-      pickupLine: "You had me at 'Hello World."
+      pickupLine: "You had me at 'Hello World.'"
     },
     {
       pickupLine: "I hope we merge without any conflicts."

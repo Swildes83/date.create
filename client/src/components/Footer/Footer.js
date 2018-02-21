@@ -12,6 +12,7 @@ class Footer extends Component {
     }
 
     componentDidMount() {
+        this.updateLine();
         setInterval(this.updateLine, 3000);
     }
 
@@ -33,8 +34,8 @@ class Footer extends Component {
         return (
             <footer>
 
-                <section id="pickupLines">
-                    <h5>Can't think of anything to say?</h5>
+                <section id="pickupLines" class="flow-text">
+                    <h3>Can't think of anything to say?</h3>
                     <div className="lines">
                         "{this.state.selectedPickUpLine}"
                     </div>

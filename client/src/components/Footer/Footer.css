@@ -14,12 +14,18 @@ h5 {
     line-height: 110%;
     margin: .75rem 0 0rem 0;
 }
-h6 {
+h3 {
+    font-size: 1.2rem;
+    font-style: normal;
     text-align: right;
 }
 
 section{
+    font-size: 1.4rem;
+    font-family: "Roboto", sans serif;
+    font-weight: 300;
     color:white;
+    font-style: italic;
     border-radius: 2px;
     position: fixed;
     top: auto;
