@@ -14,10 +14,10 @@ const CreateUser = (props) => (
 
     <div className="row">
     <div className="col s6">
-    <a href={publicPath} className="waves-effect waves-light red lighten-2 btn createuserbutton">public profile</a>
+    <a href={publicPath} className="waves-effect waves-light indigo lighten-2 btn createuserbutton">create new user</a>
     </div>
     <div className="col s6">
-    <a href={privatePath} className="waves-effect waves-light red lighten-2 btn loginbutton">private profile</a>
+    <a href={privatePath} className="waves-effect waves-light indigo lighten-2 btn loginbutton">login</a>
     </div>
     </div>
 );
