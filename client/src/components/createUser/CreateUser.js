@@ -18,11 +18,7 @@ const CreateUser = (props) => (
     <a href={publicPath} className="waves-effect waves-light indigo lighten-2 btn createuserbutton">create new user</a>
     </div>
     <div className="col s6">
-<<<<<<< HEAD
     <a href={privatePath} className="waves-effect waves-light red lighten-2 btn loginbutton">Login</a>
-=======
-    <a href={privatePath} className="waves-effect waves-light indigo lighten-2 btn loginbutton">login</a>
->>>>>>> bbb847dbc9d4ee2dfd085d7fd07ce14c572d0660
     </div>
     </div>
 );

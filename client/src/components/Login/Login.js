@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import "./Login.css";
+import API from "../../utils/API";
 
 export default class Login extends Component {
     constructor(props) {
@@ -24,6 +25,15 @@ export default class Login extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        console.log(this.state)
+        API.login(this.state.screenName, this.state.password).then(res => {
+            console.log(res);
+            localStorage.setItem("token", res.data.token);
+            this.props.history.push(`/private/${res.data.user._id}`);
+        }).catch(err => {
+            console.log(err);
+            alert("WRONG PASSWORD")
+        });
     }
     render() {
         return (
