@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './components/Header';
 import CreateUser from './components/CreateUser/CreateUser';
-import ContactQuiz from './components/contactQuiz/ContactQuiz';
+import ContactQuiz from './components/ContactQuiz';
 import Mainpage from './components/Mainpage/Mainpage';
 import './App.css';
 import { Button, Card, Row, Col } from 'react-materialize';
