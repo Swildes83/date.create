@@ -7,7 +7,10 @@
     background-repeat: no-repeat;   
     height: 500px;
 }
-
+.bg-girl {
+    background-image:url('../bg-image.jpg');
+    
+}
 #profileimage {
     position: absolute;
     bottom: 5%;
@@ -15,6 +18,8 @@
     z-index: 5;
 }
 #name {
+
+...    /* size: 30px; */
     position: absolute;
     bottom: 5%;
     right: 20%;

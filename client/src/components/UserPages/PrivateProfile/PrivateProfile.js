@@ -26,7 +26,7 @@ class PrivateProfile extends Component {
         return (
             <HashRouter>
                 <div className="card">
-                    <div className="card-content">
+                    <div className="card-content bg-girl">
                         <img id="profileimage" src="../assets/profile/ChickenKiller/profile.png" alt="My profile"></img>
                         <p id="name">{this.state.result.screenName}</p>
                     </div>
