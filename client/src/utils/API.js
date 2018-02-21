@@ -8,5 +8,9 @@ export default {
     },
     getUserData: function (id) {
        return axios.get(BASEURL + id);
+    },
+
+    login: function(screenName, password) {
+        return axios.post(`${BASEURL}/authenticate`, {screenName: screenName, password: password});
     }
 };
