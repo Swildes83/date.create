@@ -7,6 +7,7 @@ const Mainpage = (props) => (
     <div className="bg">
     <Header/>
     <CreateUser/>
+ 
   </div>
 );
 
