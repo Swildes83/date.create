@@ -6,7 +6,7 @@ import Placeholder from "../Placeholder";
 import Requirements from "./Requirements";
 import Results from "./Results";
 
-const userID = "5a8624f2fe9f971c5c565bb3";
+// const userID = "5a88b703b2711d7990ee8013";
 
 class PrivateProfile extends Component {
     state = {
@@ -14,6 +14,7 @@ class PrivateProfile extends Component {
         search: ""
     };
     componentDidMount() {
+        const userID = this.props.match.params.id;
         this.loadUserData(userID);
     };
     loadUserData = (id) => {

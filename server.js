@@ -5,7 +5,7 @@ const path = require("path");
 const routes = require("./routes");
 const morgan = require('morgan');
 const app = express();
-const io = require('socket.io');
+//const io = require('socket.io');
 
 //Web Token
 const jwt = require('jsonwebtoken');
@@ -13,6 +13,7 @@ const jwt = require('jsonwebtoken');
 const DateCreateUser = require('./models/DateCreateUser');
 const config = require('./config');
 const PORT = process.env.PORT || 3001;
+
 app.set('superSecret', config.secret); //secret Variable
 
 
@@ -38,8 +39,38 @@ app.use(bodyParser.json());
 //use morgon to log requests to the console
 app.use(morgan('dev'));
 
-
+var db = require("./models");
 app.use(routes);
+// app.post("/api/DateCreateUsers/authenticate", function(req, res) {
+//   db.DateCreateUser.findOne({
+//     screenName: req.body.screenName
+// }, function(err, user) {
+//     if(err) throw err;
+
+//     if(!user) {
+//         res.json({ success: false, message: "Authentication failed. User not found."});
+//     } else if (user) {
+//         if(user.password != req.body.password) {
+//             res.json({ success: false, message: "Authentication failed. Not the right password."});
+//         } else {
+//           console.log(user.admin);
+//             const payload = {
+//                 admin: user.admin
+//             };
+                
+//                 var token = jwt.sign(payload, app.get('superSecret'), {
+//                     expiresIn: 60 * 24
+//                 });
+
+//                 res.json({
+//                     success: true,
+//                     message: "Here's a token, don't spend it all at once",
+//                     token: token
+//                 });
+//         }
+//     }
+// });
+// });
 // Send every request to the React app
 // Define any API routes before this runs
 

@@ -2,21 +2,15 @@ const router = require("express").Router();
 const DateCreateUserController = require("../../controllers/DateCreateUserController/DateCreateUserController");
 var db = require("../../models");
 var jwt = require('jsonwebtoken');
-var app = require("express");
+const express = require('express');
 var fs = require('fs');
-// var token = jwt.sign({ foo: 'bar'}, 'shhhhhh');
-// //backdate the token 30 seconds
-// var older_token = jwt.sign({ foo: 'bar', iat: Math.floor(Date.now() / 1000) - 30 }, 'shhhhhh');
-// //const token = jwt.sign(user, '12345');
+const config = require('../../config');
+//var app = require("express");
+const app = express();
 
-// //sign with RSA SHA256
-// var cert = fs.readFileSync('private.key');
-// var token = jwt.sign({ foo: 'bar'}, cert, {algorithm: 'RS256'});
+app.set('superSecret', config.secret); //secret Variable
 
-// //sign async
-// jwt.sign({ foo: 'bar'}, cert, { algorithm: 'RS256'}, function(err, token) {
-//   console.log(token);
-// });
+
 
 // Matches with "/api/DateCreateUsers"
 router.route("/")
@@ -30,36 +24,39 @@ router.route("/:id")
 
   // DOCUMENTED: POST http://localhost:8080/api/authenticate
   // OURS http://localhost:3001/api/DateCreateUsers/authenticate
-  router.post("/authenticate", function(req, res) {
-    db.DateCreateUser.findOne({
-      screenName: req.body.screenName
-  }, function(err, user) {
-      if(err) throw err;
 
-      if(!user) {
-          res.json({ success: false, message: "Authentication failed. User not found."});
-      } else if (user) {
-          if(user.password != req.body.password) {
-              res.json({ success: false, message: "Authentication failed. Not the right password."});
-          } else {
-            console.log(user.admin);
-              const payload = {
-                  admin: user.admin
-              };
+router.post("/authenticate", function(req, res) {
+  db.DateCreateUser.findOne({
+    screenName: req.body.screenName
+}, function(err, user) {
+    if(err) throw err;
 
-                  var token = jwt.sign(payload, router.get('datedotcreateisawesome'), {
-                      expiresIn: 60 * 24
-                  });
+    if(!user) {
+        res.status(400).json({ success: false, message: "Authentication failed. User not found."});
+    } else if (user) {
+        if(user.password != req.body.password) {
+            res.status(400).json({ success: false, message: "Authentication failed. Not the right password."});
+        } else {
+          console.log(user.admin);
+            const payload = {
+                admin: user.admin,
+                screenName: user.screenName
+            };
+                
+                var token = jwt.sign(payload, config.secret, {
+                    expiresIn: 60 * 24
+                });
 
-                  res.json({
-                      success: true,
-                      message: "Here's a token, don't spend it all at once",
-                      token: token
-                  });
-          }
-      }
-  });
-  });
+                res.json({
+                    success: true,
+                    message: "Here's a token, don't spend it all at once",
+                    token: token,
+                    user: user
+                });
+        }
+    }
+});
+});
   //.post(DateCreateUserController.findOne);
 
 // Matches with "api/DateCreateUsers/search/city=:locCity&state=:locState&gender=:gender"
