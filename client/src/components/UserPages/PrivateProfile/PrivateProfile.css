@@ -1,6 +1,6 @@
 .card-content {
     position: relative;
-    background-image:url('bg-image.jpg');
+    background-image:url('../bg-image.jpg');
     background-size: cover;
     background-position: fixed;
     background-repeat: no-repeat;   
@@ -21,6 +21,6 @@
     color: white;
 }
 
-html {
+/* html {
     background: unset;
-}
+} */
