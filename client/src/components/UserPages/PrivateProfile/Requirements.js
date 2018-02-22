@@ -115,13 +115,15 @@ class Requirements extends Component {
                     </Input>
                 </Row>
                 <Row>
-                <h4>date(requirements.age(min))</h4>
+                <h4 className= "col input-field s6">date(requirements.age(min))</h4>
                     <Input
                         placeholder='Enter a minimum age:'
                         s={6}
                         label='Minimum Age'>
                     </Input>
-                    <h4>date(requirements.age(max))</h4>
+                
+                    
+                    <h4 className= "col input-field s6">date(requirements.age(max))</h4>
                     <Input
                         placeholder='Enter a maximum age:'
                         s={6}
