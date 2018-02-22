@@ -8,7 +8,8 @@ import "./CreateUser.css";
 
 const userID = "5a8624f2fe9f971c5c565bb3";
 const publicPath = "/" + userID;
-const privatePath = "/" + userID + "/private";
+const privatePath = '/Login';
+//const privatePath = "/" + userID + "/private";
 
 const CreateUser = (props) => (
 
@@ -17,7 +18,7 @@ const CreateUser = (props) => (
     <a href={publicPath} className="waves-effect waves-light indigo lighten-2 btn createuserbutton">create new user</a>
     </div>
     <div className="col s6">
-    <a href={privatePath} className="waves-effect waves-light indigo lighten-2 btn loginbutton">login</a>
+    <a href={privatePath} className="waves-effect waves-light red lighten-2 btn loginbutton">Login</a>
     </div>
     </div>
 );
