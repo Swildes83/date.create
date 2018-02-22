@@ -3,6 +3,7 @@ import { Route, NavLink, HashRouter } from "react-router-dom";
 import "./PrivateProfile.css";
 import API from "../../../utils/API";
 import Placeholder from "../Placeholder";
+import Preferences from "./Preferences";
 import Requirements from "./Requirements";
 import Results from "./Results";
 
@@ -51,7 +52,7 @@ class PrivateProfile extends Component {
                     </div>
                     <div className="private-content">
                         <Route path="/" component={Placeholder} />
-                        <Route path="/preferences" component={Placeholder} />
+                        <Route path="/preferences" component={Preferences} />
                         <Route path="/requirements" component={Requirements} />
                         <Route path="/results" component={Results} />
                         <Route path="/potentials" component={Placeholder} />

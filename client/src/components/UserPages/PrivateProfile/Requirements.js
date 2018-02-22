@@ -33,7 +33,7 @@ class Requirements extends Component {
                         label='Technology'>
                     </Input>
                 </Row>
-                <Row>
+                {/* <Row>
                 <h4>date(requirements.gaming)</h4>
                 <p>comma separated list</p>
                     <Input
@@ -41,7 +41,7 @@ class Requirements extends Component {
                         placeholder="E.g: 'Destiny 2','Injustice 2',PUBG,Overwatch,'Quake 2'"
                         label='Gaming'>
                     </Input>
-                </Row>
+                </Row> */}
                 <Row>
                 <h4>date(requirements.location(city))</h4>
                     <Input
@@ -138,7 +138,7 @@ class Requirements extends Component {
                         label='Hobbies'>
                     </Input>
                 </Row>
-                <Button className="red accent-1" waves='light'>button<Icon left>save</Icon></Button>
+                <Button className="red accent-1" waves='light'>save<Icon right>save</Icon></Button>
             </div >
         )
     }
