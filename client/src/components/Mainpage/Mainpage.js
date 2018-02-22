@@ -2,7 +2,7 @@ import React from "react";
 import "./Mainpage.css";
 import Header from '../Header';
 import Footer from '../Footer';
-import CreateUser from '../CreateUser/CreateUser';
+import CreateUser from '../createUser/CreateUser';
 
 const Mainpage = (props) => (
     <div className="bg">

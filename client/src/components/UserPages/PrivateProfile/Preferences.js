@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-// import "./BioData.css";
+import "./Preferences.css";
 import API from "../../utils/API";
+import { Row, Col } from "react-materialize";
 
 // hardcoding the user ID of Peter Griffin from mongo DB
 // You will need to update this ID with the correct ID from your local mongoDb instance
