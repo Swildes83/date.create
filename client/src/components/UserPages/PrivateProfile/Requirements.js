@@ -118,16 +118,18 @@ class Requirements extends Component {
                 <h4>date(requirements.age(min))</h4>
                     <Input
                         placeholder='Enter a minimum age:'
-                        s={6}
+                        s={12}
                         label='Minimum Age'>
                     </Input>
-                    <h4>date(requirements.age(max))</h4>
+                </Row>
+                <Row>
+                <h4>date(requirements.age(max))</h4>
                     <Input
                         placeholder='Enter a maximum age:'
-                        s={6}
+                        s={12}
                         label='Maximum Age'>
                     </Input>
-                </Row>
+                    </Row>
                 <Row>
                 <h4>date(requirements.hobbies(AFK))</h4>
                     <Input
