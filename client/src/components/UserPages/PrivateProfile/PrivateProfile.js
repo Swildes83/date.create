@@ -6,6 +6,8 @@ import Placeholder from "../Placeholder";
 import Preferences from "./Preferences";
 import Requirements from "./Requirements";
 import Results from "./Results";
+import Potentials from "./Potentials";
+import Contacts from "./Contacts";
 
 // const userID = "5a88b703b2711d7990ee8013";
 
@@ -55,8 +57,8 @@ class PrivateProfile extends Component {
                         <Route path="/preferences" component={Preferences} />
                         <Route path="/requirements" component={Requirements} />
                         <Route path="/results" component={Results} />
-                        <Route path="/potentials" component={Placeholder} />
-                        <Route path="/contacts" component={Placeholder} />
+                        <Route path="/potentials" component={Potentials} />
+                        <Route path="/contacts" component={Contacts} />
                     </div>
                 </div>
             </HashRouter>
