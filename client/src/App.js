@@ -5,7 +5,6 @@ import './App.css';
 import Login from './components/Login/';
 //import { Button, Card, Row, Col } from 'react-materialize';
 import PublicProfile from "./components/UserPages/PublicProfile";
-
 import PrivateProfile from "./components/UserPages/PrivateProfile";
 
 class App extends Component {
