@@ -1,7 +1,24 @@
-.loginbutton
+/* .btn 
 {
-    float:right;
+    color: black;
+    background-color: #7986cb; 
+    transition: none;
 }
+
+.btn-large
+{
+  background-color: #7986cb; 
+}
+
+.btn-default
+{
+  background-color: #7986cb; 
+}
+
+.btn-block
+{
+  background-color: #7986cb; 
+} */
 /* @charset "UTF-8";
 @import 'https://fonts.googleapis.com/css?family=Noto+Sans';
 body {
